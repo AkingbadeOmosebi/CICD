@@ -40,4 +40,52 @@ jobs:
             run: |
              ls -la
              hostnamectl
+
+    deploy-to-server-03:
+        needs: deploy-to-server-02
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Checkout Code
+            uses: actions/setup-node@v3
+
+          - name: display the Code
+            run: ls -la
+          
+          - name: display more thing
+            run: |
+             ls -la
+             hostnamectl
+
+    deploy-to-server-04:
+        needs: deploy-to-server-03
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Checkout Code
+            uses: actions/setup-node@v3
+
+          - name: display the Code
+            run: ls -la
+          
+          - name: display more thing
+            run: |
+             ls -la
+             hostnamectl
+      
+    deploy-to-server-05:
+        needs: deploy-to-server-04
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Checkout Code
+            uses: actions/setup-node@v3
+
+          - name: display the Code
+            run: ls -la
+          
+          - name: display more thing
+            run: |
+             ls -la
+             hostnamectl
                 
