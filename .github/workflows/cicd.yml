@@ -9,7 +9,7 @@ on:
           - main
 
 jobs:
-    deploy-to-server:
+    deploy-to-server-01:
         runs-on: ubuntu-latest
 
         steps:
@@ -26,6 +26,7 @@ jobs:
 
 
     deploy-to-server-02:
+        needs: deploy-to-server-01
         runs-on: ubuntu-latest
 
         steps:
