@@ -1,0 +1,24 @@
+# defining the name of the pipeline
+name: CICD pipeline
+
+#defining the trigerring
+
+on:
+    push:
+        branches:
+          -main
+
+jobs:
+    deploy-to-server:
+        runs-on: ubuntu-latest
+
+        steps:
+          - name: Checkout Code
+            uses: actions/setup-node@v3
+
+          - name: display the Code
+            run: ls ubuntu-latest
+          
+          - name: display more thing
+            run: ls -la
+        
