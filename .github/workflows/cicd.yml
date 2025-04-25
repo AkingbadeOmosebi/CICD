@@ -17,8 +17,10 @@ jobs:
             uses: actions/setup-node@v3
 
           - name: display the Code
-            run: ls ubuntu-latest
+            run: ls -la
           
           - name: display more thing
-            run: ls -la
+            run: |
+             ls -la
+             hostnamectl
         
